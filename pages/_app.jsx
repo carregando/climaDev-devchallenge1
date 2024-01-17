@@ -2,12 +2,12 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import theme from '../src/theme'
 
 const GlobalStyle = createGlobalStyle`
-  *{
+  html, body{
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    background-color: ${props => props.theme.colors.white};
     box-sizing: border-box;
+    color: ${props => props.theme.colors.black}
   }
 `
 
