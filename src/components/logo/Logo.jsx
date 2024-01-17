@@ -18,13 +18,13 @@ const VerticalText = styled.h1`
   margin-left: 150px;
 `
 const HorizontalText = styled.h1`
-  font-size: 80px;
+  font-size: 40px;
   color: ${props => props.theme.colors.black};
 `
 
 const PrimaryColor = styled.span`
   color: ${props => props.theme.colors.primary};
-  font-weight: bold;
+  text-transform: uppercase;
 `
 
 export default function Logo  ({ showImage, textType }) {
@@ -36,9 +36,13 @@ export default function Logo  ({ showImage, textType }) {
           Clima <PrimaryColor>DEV</PrimaryColor>
         </VerticalText>:
         <HorizontalText>
-          Clima <PrimaryColor>DEV</PrimaryColor>
+          Clima<PrimaryColor>DEV</PrimaryColor>
         </HorizontalText>
       }
     </div>
   )
+}
+
+Logo.defaultProps = {
+  textType: 'horizontal'
 }
