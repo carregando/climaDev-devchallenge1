@@ -31,10 +31,12 @@ export default function Logo  ({ showImage, textType }) {
   return (
     <div>
       {showImage && <Img src="./woman.svg"/>} 
-      {textType === "vertical"?
+      {textType === "vertical" &&
         <VerticalText>
           Clima <PrimaryColor>DEV</PrimaryColor>
-        </VerticalText>:
+        </VerticalText>
+      }
+      {textType === "horizontal" &&
         <HorizontalText>
           Clima<PrimaryColor>DEV</PrimaryColor>
         </HorizontalText>
